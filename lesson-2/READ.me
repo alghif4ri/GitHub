@@ -1,1 +1,38 @@
 Execution Context, Hoisting & Scope | Closures
+creation phase pada Global Context
+nama var = undefined
+nama function = fn()
+inilah yang disebut konsep Hoisting
+window = global object
+this = window
+
+Execution Phase, fase mengeksekusi kode tiap baris dari atas kebawah, kode diatas akan menghasilkan 'undefined'.
+karena log dieksekusi sebelum diberi nilai.
+
+Closures adalah fungsi yang memiliki akses ke variabel-variabel dalam lingkup di mana ia didefinisikan, 
+bahkan setelah lingkup tersebut telah dikembalikan. Ini dimungkinkan karena closure menyimpan referensi ke lingkup di mana ia didefinisikan, dan bukan hanya ke nilai-nilai variabel dalam lingkup tersebut.
+
+Misalnya, perhatikan kode berikut:
+
+function outer() {
+  var name = "John Doe";
+
+  function inner() {
+    alert(name);
+  }
+
+  return inner;
+}
+
+var myFunc = outer();
+myFunc(); // Alerts "John Doe"
+Dalam contoh ini, fungsi inner adalah closure. Ia memiliki akses ke variabel name, 
+meskipun name didefinisikan dalam lingkup fungsi outer. Ini karena inner menyimpan referensi ke lingkup outer, 
+dan bukan hanya ke nilai name.
+
+Closure dapat digunakan untuk berbagai keperluan, seperti:
+
+Menyimpan data pribadi.
+Membuat fungsi yang dapat dipanggil nanti.
+Membuat fungsi yang dapat mengakses variabel-variabel dalam lingkup di mana ia didefinisikan, bahkan setelah lingkup tersebut telah dikembalikan.
+

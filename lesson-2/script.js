@@ -50,17 +50,55 @@
 // }
 // a();
 
-function satu(){
-    var nama = 'alghi';
-    console.log(nama);
-}
+// function satu(){
+//     var nama = 'alghi';
+//     console.log(nama);
+// }
 
-function dua(){
-    console.log(nama);
-}
+// function dua(){
+//     console.log(nama);
+// }
 
-console.log(nama);
-var nama = 'Aiman';
-satu();
-dua('Taslim');
-console.log(nama);
+// console.log(nama);
+// var nama = 'Aiman';
+// satu();
+// dua('Taslim');
+// console.log(nama);
+
+// function init(){
+//     // let nama = 'Alghi';
+//     function tampilNama(nama){
+//         console.log(nama);
+//     }
+//     return tampilNama;
+// }
+// let panggilNama = init();
+// panggilNama('alghi');
+// function greetings(time) {
+//   return function (name) {
+//     console.log(`hallo ${name}, Good ${time}, have a good time!`);
+//   };
+// }
+// // factory function
+// let goodMorning = greetings("Morning");
+// let goodAfterNoon = greetings("Afternoon");
+// let goodNight = greetings("Night");
+
+// goodMorning("Alghi");
+// goodAfterNoon("Yoan");
+// console.dir(goodAfterNoon);
+
+let add = (function () {
+  let counter = 0;
+  return function () {
+    return ++counter;
+  };
+})();
+counter = 100;
+console.log(add());
+console.log(add());
+console.log(add());
+console.log(add());
+console.log(add());
+console.log(add());
+console.log(add());
