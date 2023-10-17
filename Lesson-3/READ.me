@@ -1,0 +1,26 @@
+apa itu arrow function?
+- Arrow Function adalah sebuah fungsi yang didefinisikan dengan menggunakan tanda panah () dan menyimpan definisi dalam satu baris. Fungsi ini memiliki kemampuan untuk menerima argumen, melewatkan nilai kepada parameter lainnya, dan dapat melakukan pengembalian beberapa value. Namun, hanya bisa berfungsi sebagai argument fungsi atau sebagai hasil ekspression.
+
+this pada arrow function?
+## 1. Arrow Function
+Arrow functions adalah cara yang lebih singkat untuk menulis fungsi di JavaScript, dengan menghapus kata "function" dan tanda kurung yang biasanya digunakan sebelum nama fungsi. 
+Contoh: `const square = x => x * x;`
+### Menggunakan this dalam Arrow Functions
+Dalam arrow function, keyword this tidak memiliki arti sama seperti pada fungsi tradisional.
+Hal ini disebabkan karena arrow function dibangunkan dari ES6 (ECMAScript2015) yang mend
+asertikan bahwa semua konteks pemanggilan harus disimpulkan oleh pengembang program. Hal ini ber
+arti bahwa this akan terkonekt dengan objek yang paling dekat yang membuat at
+au melakukan pemanggilan fungsi arrow. Jika Anda ingin mengakses properti objek
+dari luar fungsi arrow, maka gunakan .bind() atau call().
+javascript
+javascript
+// contoh penggunaannya
+var obj = {
+    name : 'John',
+    sayHello : ()=>{
+        console.log('Hi! My name is '+this.name); // Hi! My name is undefined
+        }
+        }
+obj.sayHello();
+var boundSayHello = obj.sayHello.bind(obj);
+boundSayHello();
