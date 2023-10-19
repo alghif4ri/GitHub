@@ -68,29 +68,82 @@
 
 // nested
 // html fragment bersarang
-const mhs = {
-  nama: "Muhammad Bilal",
-  semester: 5,
-  mataKuliah: [
-    "Rekayasa Perangkat Lunak",
-    "Interaksi Manusia dengan Komputer",
-    "Etika Profesi",
-    "Perancangan OOP",
-  ],
-};
+// const mhs = {
+//   nama: "Muhammad Bilal",
+//   semester: 5,
+//   mataKuliah: [
+//     "Rekayasa Perangkat Lunak",
+//     "Interaksi Manusia dengan Komputer",
+//     "Etika Profesi",
+//     "Perancangan OOP",
+//   ],
+// };
 
-function cetakMataKuliah(mataKuliah) {
-  return `
-    <ol>
-    ${mataKuliah.map((mk) => `<li>${mk}</li>`).join("")}
-    </ol>
-    `;
-}
+// function cetakMataKuliah(mataKuliah) {
+//   return `
+//     <ol>
+//     ${mataKuliah.map((mk) => `<li>${mk}</li>`).join("")}
+//     </ol>
+//     `;
+// }
 
-const el = `<div class="mhs">
-<h2>${mhs.nama}</h2>
-<span class="semester">${mhs.semester}</span>
-<h4>Mata Kuliah :</h4>
-${cetakMataKuliah(mhs.mataKuliah)}
-</div>`;
-document.body.innerHTML = el;
+// const el = `<div class="mhs">
+// <h2>${mhs.nama}</h2>
+// <span class="semester">${mhs.semester}</span>
+// <h4>Mata Kuliah :</h4>
+// ${cetakMataKuliah(mhs.mataKuliah)}
+// </div>`;
+// document.body.innerHTML = el;
+
+// Tagged Template
+// const nama = "Alghi";
+// const umur = 30;
+
+// function coba(strings, ...values) {
+//   //   let result = "";
+//   //   strings.forEach((str, i) => {
+//   //     result += `${str}${values[i] || ""}`;
+//   //   });
+//   //   return result;
+//   return strings.reduce(
+//     (result, str, i) => `${result}${str}${values[i] || ""}`,
+//     ""
+//   );
+// }
+
+// const str = coba`hallo ${nama}, umur kamu ${umur}`;
+// console.log(str);
+
+// contoh implementasi
+// const nama = "Alghi";
+// const umur = 30;
+// const email = "r.abudzar@gmail.com";
+
+// function highlight(strings, ...values) {
+//   return strings.reduce(
+//     (result, str, i) =>
+//       `${result}${str}<span class="hl">${values[i] || ""}</span>`,
+//     ""
+//   );
+// }
+
+// const str = highlight`hallo ${nama}, umur kamu ${umur}, email saya ${email}`;
+// document.body.innerHTML = str;
+// console.log(str);
+
+// contoh implementasi escaping / sanitize HTML tags
+// misal membuat sebuah fungsi dengan nama sanitize, fungsi ini berisi sebuah library untuk mefilter jika ada percoba menjalankan script berbahaya
+// function sanitize(strings, ...values) {
+//   return DOMPurify.san;
+//   aboutMe;
+// }
+
+// const nama = "lucky";
+// pada variable aboutMe, terdapat sebuat script yang tidak diizinkan
+// const aboutMe = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, voluptates. <img scr="http://unsplash.com/100/?/" onload="alert('hihi');"/> `;
+
+// maka, ketika memanggil string akan ditampung terlebih dahulu kedalam fungsi sanitize, dan mengengecek setiap componentnya apakah ada script yang tidak diizinkan oleh library sanitize
+// const html = sanitize`<h3>${nama}</h3><p>${aboutMe}</p>`;
+
+// implementasi Tagged Template juga bisa untuk Translation halaman
+// reference github.com/sklomer
