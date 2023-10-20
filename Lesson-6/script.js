@@ -88,3 +88,65 @@ const perkenalan = ["halo", "nama", "saya", "alghi"];
 // }
 
 // console.log(getIdMhs(mhs));
+
+// Destructuring Funtion
+
+// function kalkulasi(a, b) {
+//   return [a + b, a - b, a * b, a / b];
+// }
+// tanpa destructuring
+// const jumlah = kalkulasi(2, 3)[0];
+// const kali = kalkulasi(2, 3)[1];
+// console.log(jumlah); //5
+// console.log(kali); //6
+
+// dengan destructuring
+// const[jumlah, kali] = kalkulasi(2,3);
+// console.log(jumlah); //5
+// console.log(kali); //6
+// const [tambah, kurang, kali, bagi = "tidak ada"] = kalkulasi(2, 3);
+// console.log(bagi);
+
+// destructuring object
+// function kalkulasi(a, b) {
+//   return {
+//     tambah: a + b,
+//     kurang: a - b,
+//     kali: a * b,
+//     bagi: (a / b).toFixed(2),
+//   };
+// }
+// const { bagi, tambah, kali, kurang } = kalkulasi(2, 3);
+// console.log(kurang);
+
+// destructuring fucntion arguments
+const mhs1 = {
+  nama: "alghi",
+  umur: 30,
+  email: "r.abudzar@gmail.com",
+  nilai: {
+    matematika: 87,
+    indonesia: 94,
+    inggris: 88,
+  },
+};
+
+// function declaration
+// function cetakMhs(nama, umur) {
+//   return `halo, nama saya ${nama}, umur ${umur} tahun`;
+// }
+// console.log(cetakMhs(mhs1.nama, mhs1.umur));
+
+//mengirim parameter sebagai object
+// function cetakMhs(mhs) {
+//   // parameter dengan object
+//   return `halo, nama saya ${mhs.nama}, umur ${mhs.umur} tahun`;
+// }
+// console.log(cetakMhs(mhs1));
+
+// dengan destructuring
+// function cetakMhs({ nama, umur, nilai }) {
+//   // parameter dengan object
+//   return `halo, nama saya ${nama}, umur ${umur} tahun, dan nilai mtk saya ${nilai.matematika}`;
+// }
+// console.log(cetakMhs(mhs1));
