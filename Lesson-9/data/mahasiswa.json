@@ -1,0 +1,75 @@
+{
+    "mahasiswa": [
+      {
+        "nama": "John Doe",
+        "nim": "123456",
+        "email": "john.doe@example.com",
+        "jurusan": "Teknik Informatika",
+        "idDosenWali": "D001"
+      },
+      {
+        "nama": "Jane Smith",
+        "nim": "789012",
+        "email": "jane.smith@example.com",
+        "jurusan": "Sistem Informasi",
+        "idDosenWali": "D002"
+      },
+      {
+        "nama": "Ahmad Abdullah",
+        "nim": "345678",
+        "email": "ahmad.abdullah@example.com",
+        "jurusan": "Teknik Elektro",
+        "idDosenWali": "D003"
+      },
+      {
+        "nama": "Maria Rodriguez",
+        "nim": "567890",
+        "email": "maria.rodriguez@example.com",
+        "jurusan": "Manajemen Bisnis",
+        "idDosenWali": "D004"
+      },
+      {
+        "nama": "Muhammad Ali",
+        "nim": "901234",
+        "email": "muhammad.ali@example.com",
+        "jurusan": "Ilmu Komputer",
+        "idDosenWali": "D005"
+      },
+      {
+        "nama": "Aisha Khan",
+        "nim": "123789",
+        "email": "aisha.khan@example.com",
+        "jurusan": "Kimia",
+        "idDosenWali": "D006"
+      },
+      {
+        "nama": "Carlos Fernandez",
+        "nim": "456789",
+        "email": "carlos.fernandez@example.com",
+        "jurusan": "Teknik Sipil",
+        "idDosenWali": "D007"
+      },
+      {
+        "nama": "Olivia Johnson",
+        "nim": "987654",
+        "email": "olivia.johnson@example.com",
+        "jurusan": "Teknik Mesin",
+        "idDosenWali": "D008"
+      },
+      {
+        "nama": "Ravi Patel",
+        "nim": "234567",
+        "email": "ravi.patel@example.com",
+        "jurusan": "Ekonomi",
+        "idDosenWali": "D009"
+      },
+      {
+        "nama": "Sophie Martin",
+        "nim": "876543",
+        "email": "sophie.martin@example.com",
+        "jurusan": "Psikologi",
+        "idDosenWali": "D010"
+      }
+    ]
+  }
+  
