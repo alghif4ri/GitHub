@@ -33,7 +33,72 @@
 // const mhs = [...liMhs].map((m) => m.textContent);
 // console.log(mhs);
 
-const nama = document.querySelector(".nama");
-const huruf = [...nama.textContent].map((h) => `<span>${h}</span>`).join("");
+// const nama = document.querySelector(".nama");
+// const huruf = [...nama.textContent].map((h) => `<span>${h}</span>`).join("");
 // console.log(huruf);
-nama.innerHTML = huruf;
+// nama.innerHTML = huruf;
+
+// Rest Parameter
+// function myFunc(a,...myArgs) {
+//   //   return `a = ${a}, b = ${b}, myArgs = ${myArgs}`;
+//   return myArgs;
+// }
+
+// function myFunc() {
+//   return `a = ${a}, b = ${b}, myArgs = ${myArgs}`;
+//   return arguments;
+//   return Array.from(arguments);
+//   return [...arguments];
+// }
+// console.log(myFunc(1, 2, 3, 4, 5));
+
+// function jumlahkan(...angka) {
+// let total = 0;
+// for (const a of angka) {
+//   total += a;
+// }
+// return total;
+// higher order
+// return angka.reduce((acc, cur) => acc + cur, 0);
+// }
+// console.log(jumlahkan(1, 2, 3, 4, 5));
+
+// array destructuring
+// const group1 = ["Alghi", "budi", "caca", "erik"];
+// const [ketua, wakil, ...anggota] = group1;
+// console.log(`Ketua : ${ketua} , Wakil: ${wakil}, Anggota : ${anggota}`);
+
+//object destructuring
+// const team = {
+//   pm: 'alghi',
+//   frontend1: 'budi',
+//   frontend2: 'caca',
+//   backend: 'erik'
+// };
+// const {pm, ...myteam} = team;
+// console.log(`PM : ${pm} , My Team : ${Object.values(myteam)}`);
+
+//filtering
+function filterBy(type, ...values){
+return values.filter(v => typeof v === type);
+}
+console.log(filterBy('string', 1,2, 'Alghi',false,10,true,'aiman'));
+
+//array spreading
+// function getData() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve([
+//         { name: "Algi", age: 27 },
+//         { name: "Budi", age: 28 },
+//         { name: "Caca", age: 29 },
+//         { name: "Erik", age: 30 },
+//       ]);
+//     }, 2000);
+//   });
+// }
+// getData().then((data) => {
+//   data.forEach((d) => {
+//     console.log(`Nama : ${d.name}, Umur : ${d.age}`);
+//   });
+// });
